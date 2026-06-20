@@ -12,6 +12,7 @@ Source attribution and evaluation metrics
 
 
 🏗️ Architecture
+
 Documents → Chunking → Embeddings → Vector DB (Chroma)
                 ↓
           Retrieval (Top-K)
@@ -28,25 +29,30 @@ Documents → Chunking → Embeddings → Vector DB (Chroma)
 ⚙️ Features
 
 🔍 RAG Pipeline
+
 Semantic search using embeddings
 Context-aware LLM responses
 Retrieval of top-k relevant chunks
 
 📊 Observability
+
 End-to-end latency tracking
 Query logging to CSV
 Chunk retrieval metrics
 
 📚 Source Attribution
+
 Chunk-level grounding of answers
 Traceability of responses
 
 🧪 Evaluation Layer
+
 Faithfulness scoring (context overlap)
 Basic hallucination detection
 
 
 📁 Data Flow
+
 Raw Documents
    ↓
 Chunking (LangChain)
@@ -91,6 +97,7 @@ timestamp,question,answer,latency_sec,chunks_retrieved
 
 
 🛠️ Tech Stack
+
 Python
 LangChain
 ChromaDB
