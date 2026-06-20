@@ -1,4 +1,5 @@
 🧠 AI Product Intelligence Platform (Local RAG System)
+
 🚀 Overview
 
 This project is a local Retrieval-Augmented Generation (RAG) system that enables intelligent question answering over enterprise-style documents using a combination of:
@@ -60,30 +61,36 @@ LLM Response (Phi-3)
    ↓
 Evaluation + Logging
 
+## Project Highlights
 
+- Built a fully local Retrieval-Augmented Generation (RAG) system using Ollama and Phi-3 Mini
+- Implemented semantic retrieval with ChromaDB and HuggingFace embeddings
+- Added observability through latency tracking and query logging
+- Implemented source attribution for explainable responses
+- Added evaluation capabilities including faithfulness scoring and hallucination detection
+- Designed using production-inspired AI architecture principles
+
+  
 🧠 Example Query
 
 Question:
-
 What is SEV1 response time?
 
 Answer:
-
 Immediate response (< 30 minutes)
 
 Evaluation:
-
 Faithfulness Score: 0.86
 Hallucination: None detected
 
 
-📈 Logs Example
+📈 Logs Example:
+
 timestamp,question,answer,latency_sec,chunks_retrieved
 2026-06-18,What is SEV1 response time?,Immediate response,12.3,3
 
 
 🛠️ Tech Stack
-
 Python
 LangChain
 ChromaDB
@@ -93,6 +100,7 @@ CSV-based observability
 
 
 📌 Key Learning Outcomes
+
 Built end-to-end RAG system from scratch
 Implemented vector database retrieval pipeline
 Added observability and evaluation layer
@@ -100,12 +108,14 @@ Understood real-world LLM system architecture
 
 
 ⚠️ Limitations
+
 CPU-based inference (slower response time)
 Simple heuristic evaluation (not full RAGAS)
 Local-only deployment
 
 
 🚀 Future Improvements
+
 Add reranking model
 Add dbt-style data pipeline layer
 Replace heuristics with RAGAS evaluation
