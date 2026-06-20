@@ -1,0 +1,47 @@
+ACME INCIDENT AND DATA QUALITY PLAYBOOK
+
+1. PURPOSE
+This document defines how data incidents and quality issues are handled.
+
+2. DATA INCIDENT TYPES
+- Missing data
+- Delayed pipelines
+- Duplicate records
+- Incorrect aggregations
+- Schema changes without notice
+
+3. SEVERITY LEVELS
+- SEV1: Critical production outage
+- SEV2: Major degradation
+- SEV3: Minor issue
+- SEV4: Informational
+
+4. RESPONSE TIMES
+- SEV1: Immediate response (< 30 minutes)
+- SEV2: < 2 hours
+- SEV3: < 24 hours
+
+5. ROOT CAUSE ANALYSIS (RCA)
+Every SEV1/SEV2 incident requires RCA covering:
+- data source issue
+- transformation issue
+- infrastructure issue
+- human error
+
+6. DATA QUALITY CHECKS
+- Row count validation
+- Schema validation
+- Null threshold monitoring
+- Freshness validation
+
+7. ROLLBACK STRATEGY
+Pipelines must support rollback to previous stable version within 10 minutes.
+
+8. POST-INCIDENT IMPROVEMENTS
+Each incident must result in:
+- improved monitoring
+- additional validation checks
+- documentation updates
+
+9. OWNERSHIP
+Each dataset has a designated owner responsible for quality and SLAs.

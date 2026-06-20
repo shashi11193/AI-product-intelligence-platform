@@ -1,0 +1,46 @@
+ACME DATA PLATFORM ARCHITECTURE GUIDE
+
+1. OVERVIEW
+The Acme Data Platform is built to support analytics, reporting, and machine learning workloads.
+
+2. DATA SOURCES
+- Application databases (PostgreSQL)
+- Event streams (Kafka)
+- External APIs (third-party vendors)
+
+3. INGESTION LAYER
+- Batch ingestion using Airflow
+- Streaming ingestion using Kafka consumers
+- Raw data stored in S3-compatible object storage
+
+4. DATA WAREHOUSE
+- Snowflake is used as the central warehouse
+- Data is organized into:
+  - Raw Layer
+  - Staging Layer
+  - Mart Layer
+
+5. TRANSFORMATION LAYER
+- dbt is used for transformations
+- Modular models:
+  - stg_* (cleaning raw data)
+  - int_* (business logic)
+  - fct_* (fact tables)
+  - dim_* (dimension tables)
+
+6. DATA QUALITY
+- Null checks on critical fields
+- Uniqueness constraints on primary keys
+- Freshness checks on event tables
+
+7. ORCHESTRATION
+- Airflow DAGs run scheduled pipelines every 15 minutes for batch jobs
+- Streaming pipelines run continuously
+
+8. MONITORING
+- Pipeline failures trigger Slack alerts
+- Latency thresholds are monitored (SLA: < 5 minutes for streaming data)
+
+9. SCALABILITY DESIGN
+- Partitioning is used for large tables
+- Incremental dbt models reduce compute cost

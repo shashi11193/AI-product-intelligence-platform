@@ -1,0 +1,46 @@
+ACME PRODUCT ANALYTICS GUIDE
+
+1. OVERVIEW
+This document describes how product analytics is captured and used to drive decision making.
+
+2. EVENT TRACKING
+We track the following events:
+- user_login
+- search_query
+- document_view
+- ai_response_generated
+- feedback_submitted
+
+3. KEY METRICS
+- Daily Active Users (DAU)
+- Monthly Active Users (MAU)
+- Retention Rate
+- Average Session Duration
+- AI Response Satisfaction Score
+
+4. FEEDBACK SYSTEM
+Users can rate AI responses:
+- 👍 Helpful
+- 👎 Not Helpful
+Optional comments are stored for analysis.
+
+5. A/B TESTING
+All new AI features are tested using A/B testing:
+- 50% control group
+- 50% treatment group
+Success is measured via engagement and satisfaction metrics.
+
+6. DASHBOARDS
+Dashboards are built in Power BI and include:
+- usage trends
+- AI performance metrics
+- user satisfaction trends
+
+7. ALERTING
+A drop in satisfaction score below 70% triggers alerts to the product team.
+
+8. SEGMENTATION
+Users are segmented by:
+- enterprise vs individual
+- high vs low engagement
+- domain usage patterns

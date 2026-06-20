@@ -1,0 +1,41 @@
+ACME AI USAGE AND GOVERNANCE POLICY
+
+1. PURPOSE
+This document defines rules for safe and responsible use of AI systems within Acme Corporation.
+
+2. APPROVED USE CASES
+- Summarizing internal documents
+- Assisting with customer support responses
+- Generating analytics insights
+- Internal knowledge search using LLM systems
+
+3. PROHIBITED USE CASES
+- Processing sensitive personal data (PII) without masking
+- Generating legal or financial advice for external customers
+- Using external LLM APIs without approval
+
+4. PROMPT LOGGING
+All prompts and responses must be logged for audit purposes. Logs include:
+- user_id
+- timestamp
+- prompt_text
+- model_response
+- latency
+
+5. MODEL EVALUATION
+All LLM outputs must be evaluated using:
+- Relevance score
+- Faithfulness score
+- Hallucination detection checks
+
+6. HUMAN-IN-THE-LOOP
+High-risk outputs must be reviewed by a human before production deployment.
+
+7. DATA PRIVACY
+No customer PII may be included in prompts or embeddings.
+
+8. RETENTION POLICY
+Logs are retained for 90 days and then archived.
+
+9. INCIDENT HANDLING
+Any hallucination or unsafe output must be reported within 24 hours to the AI governance team.
