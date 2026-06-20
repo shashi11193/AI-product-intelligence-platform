@@ -13,6 +13,9 @@ Source attribution and evaluation metrics
 
 🏗️ Architecture
 
+<img width="1024" height="843" alt="image" src="https://github.com/user-attachments/assets/f5031e17-143b-45d6-918e-4d5890fa3729" />
+
+
 Documents → Chunking → Embeddings → Vector DB (Chroma)
                 ↓
           Retrieval (Top-K)
